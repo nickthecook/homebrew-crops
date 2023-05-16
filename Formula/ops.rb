@@ -2,8 +2,8 @@
 class Ops < Formula
   desc "Lightweight automation for your project"
   homepage "https://github.com/nickthecook/crops"
-  url "https://github.com/nickthecook/crops/archive/refs/tags/2.0.4.tar.gz"
-  sha256 "9d454c5cbedbdcd22bcbba08978693bab54d3c511e79b7e09971b7abfafdf29f"
+  url "https://github.com/nickthecook/crops/archive/refs/tags/2.0.5.tar.gz"
+  sha256 "d8f7a123e36bb32c81cdc44ca2fde3620fa22c704af0633d10f0aff8d1646c27"
   license "GPL-3.0-only"
 
   depends_on "crystal" => :build
@@ -14,8 +14,8 @@ class Ops < Formula
 
   def install
     local_crystal_path = `crystal env CRYSTAL_PATH`.chomp
-    system("CRYSTAL_PATH='src:lib:#{local_crystal_path}' crystal build -o ops ops.cr")
-    bin.install "ops"
+    system("CRYSTAL_PATH='src:lib:#{local_crystal_path}' shards build --release")
+    bin.install "bin/ops"
   end
 
   test do
