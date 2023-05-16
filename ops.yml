@@ -1,0 +1,3 @@
+actions:
+  url: grep url Formula/ops.rb | grep -o 'https[^"]*'
+  sum: wget -O - -q "$(ops url)" | sha256sum
