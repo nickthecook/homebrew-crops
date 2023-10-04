@@ -2,8 +2,8 @@
 class Ops < Formula
   desc "Lightweight automation for your project"
   homepage "https://github.com/nickthecook/crops"
-  url "https://github.com/nickthecook/crops/archive/refs/tags/2.2.0.tar.gz"
-  sha256 "bbf385c5bb3ee236caa08686a57ab9c81e72b6024d7f9e75ccfe5ec40c533518"
+  url "https://github.com/nickthecook/crops/archive/refs/tags/2.3.0.tar.gz"
+  sha256 "76ffc1be1739aca690a8225881641e47e07ce5560d0a92c58c1102a9cbda0595"
   license "GPL-3.0-only"
 
   depends_on "crystal" => :build
