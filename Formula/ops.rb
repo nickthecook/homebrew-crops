@@ -16,6 +16,7 @@ class Ops < Formula
     local_crystal_path = `crystal env CRYSTAL_PATH`.chomp
     system("CRYSTAL_PATH='src:lib:#{local_crystal_path}' shards build --release")
     bin.install "bin/ops"
+    generate_completions_from_executable(bin/"ops", "completion", shells: [:bash, :zsh, :fish])
   end
 
   test do
